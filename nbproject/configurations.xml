@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="84">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <commandLine>-fno-rtti -fvisibility=hidden</commandLine>
+          <preprocessorList>
+            <Elem>__STDC_CONSTANT_MACROS</Elem>
+            <Elem>__STDC_LIMIT_MACROS</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <stripSymbols>true</stripSymbols>
+          <linkerLibItems>
+            <linkerLibFileItem>/usr/local/lib/libclang.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangAnalysis.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangARCMigrate.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangAST.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangASTMatchers.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangBasic.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangCodeGen.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangDriver.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangEdit.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangFrontend.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangFrontendTool.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangLex.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangParse.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangRewriteCore.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangRewriteFrontend.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangSema.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangSerialization.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangStaticAnalyzerCheckers.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangStaticAnalyzerCore.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangStaticAnalyzerFrontend.a</linkerLibFileItem>
+            <linkerLibFileItem>/usr/local/lib/libclangTooling.a</linkerLibFileItem>
+            <linkerLibLibItem>c++</linkerLibLibItem>
+            <linkerLibLibItem>c</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+            <linkerLibLibItem>stdc++.6</linkerLibLibItem>
+            <linkerLibLibItem>LLVMAnalysis</linkerLibLibItem>
+            <linkerLibLibItem>LLVMArchive</linkerLibLibItem>
+            <linkerLibLibItem>LLVMARMAsmParser</linkerLibLibItem>
+            <linkerLibLibItem>LLVMARMAsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMARMCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMARMDesc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMARMDisassembler</linkerLibLibItem>
+            <linkerLibLibItem>LLVMARMInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMAsmParser</linkerLibLibItem>
+            <linkerLibLibItem>LLVMAsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMBitReader</linkerLibLibItem>
+            <linkerLibLibItem>LLVMBitWriter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMCore</linkerLibLibItem>
+            <linkerLibLibItem>LLVMCppBackendCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMCppBackendInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMDebugInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMExecutionEngine</linkerLibLibItem>
+            <linkerLibLibItem>LLVMHexagonAsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMHexagonCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMHexagonDesc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMHexagonInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMInstCombine</linkerLibLibItem>
+            <linkerLibLibItem>LLVMInstrumentation</linkerLibLibItem>
+            <linkerLibLibItem>LLVMInterpreter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMipa</linkerLibLibItem>
+            <linkerLibLibItem>LLVMipo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMJIT</linkerLibLibItem>
+            <linkerLibLibItem>LLVMLinker</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMBlazeAsmParser</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMBlazeAsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMBlazeCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMBlazeDesc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMBlazeDisassembler</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMBlazeInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMC</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMCDisassembler</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMCJIT</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMCParser</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMipsAsmParser</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMipsAsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMipsCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMipsDesc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMipsDisassembler</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMipsInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMSP430AsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMSP430CodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMSP430Desc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMMSP430Info</linkerLibLibItem>
+            <linkerLibLibItem>LLVMNVPTXAsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMNVPTXCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMNVPTXDesc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMNVPTXInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMObject</linkerLibLibItem>
+            <linkerLibLibItem>LLVMPowerPCAsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMPowerPCCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMPowerPCDesc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMPowerPCInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMRuntimeDyld</linkerLibLibItem>
+            <linkerLibLibItem>LLVMScalarOpts</linkerLibLibItem>
+            <linkerLibLibItem>LLVMSelectionDAG</linkerLibLibItem>
+            <linkerLibLibItem>LLVMSparcCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMSparcDesc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMSparcInfo</linkerLibLibItem>
+            <linkerLibLibItem>LLVMSupport</linkerLibLibItem>
+            <linkerLibLibItem>LLVMTableGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMTarget</linkerLibLibItem>
+            <linkerLibLibItem>LLVMTransformUtils</linkerLibLibItem>
+            <linkerLibLibItem>LLVMVectorize</linkerLibLibItem>
+            <linkerLibLibItem>LLVMX86AsmParser</linkerLibLibItem>
+            <linkerLibLibItem>LLVMX86AsmPrinter</linkerLibLibItem>
+            <linkerLibLibItem>LLVMX86CodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMX86Desc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMX86Disassembler</linkerLibLibItem>
+            <linkerLibLibItem>LLVMX86Info</linkerLibLibItem>
+            <linkerLibLibItem>LLVMX86Utils</linkerLibLibItem>
+            <linkerLibLibItem>LLVMXCoreCodeGen</linkerLibLibItem>
+            <linkerLibLibItem>LLVMXCoreDesc</linkerLibLibItem>
+            <linkerLibLibItem>LLVMXCoreInfo</linkerLibLibItem>
+            <linkerLibLibItem>clang</linkerLibLibItem>
+            <linkerLibLibItem>clangAST</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>-fno-rtti -fvisibility=hidden</commandLine>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
