@@ -1,16 +1,17 @@
+#include <clang/Frontend/CompilerInstance.h>
+
 #include "testvisitor.hpp"
 #include "DeclToString.hpp"
 
 clang::ASTConsumer *OutlineBuilderAction::CreateASTConsumer(clang::CompilerInstance &compInstance, llvm::StringRef filename) {
+    compInstance.getDiagnostics().setClient(new clang::IgnoringDiagConsumer(), true);
     return new OutlineBuilderConsumer(filename.str());
 }
 
 OutlineBuilderConsumer::OutlineBuilderConsumer(const std::string& filename) : filename(filename) {
-    std::cout << "parsig file" << std::endl;
 }
 
 void OutlineBuilderConsumer::HandleTranslationUnit(clang::ASTContext &ctxt) {
-    ctxt.getDiagnostics().setClient(new clang::IgnoringDiagConsumer(), true);
     OutlineBuildingVisitor Visitor(&ctxt, filename);
     Visitor.TraverseDecl(ctxt.getTranslationUnitDecl());
     std::stringstream sout;
@@ -23,7 +24,7 @@ void OutlineBuilderConsumer::HandleTranslationUnit(clang::ASTContext &ctxt) {
         it++;
     }
     sout << "], \"Decls\" : [";
-    sout << Visitor.ss.str() << std::endl;
+    sout << Visitor.ss.str();
     sout << "]}";
     
     std::cout << sout.str() << std::endl;
@@ -167,7 +168,7 @@ bool OutlineBuildingVisitor::TraverseNamespaceDecl(NamespaceDecl* namespaceDecl)
     return true;
 }
 
-bool OutlineBuildingVisitor::getLocationFromFullSourceLoc(const FullSourceLoc& sourceLoc, std::string& filename, size_t& line, size_t& col) {
+void OutlineBuildingVisitor::getLocationFromFullSourceLoc(const FullSourceLoc& sourceLoc, std::string& filename, size_t& line, size_t& col) {
     if (sourceLoc.isValid()) {
         line = sourceLoc.getSpellingLineNumber();
         col = sourceLoc.getSpellingColumnNumber();

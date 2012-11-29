@@ -57,7 +57,7 @@ public:
 
     bool TraverseNamespaceDecl(NamespaceDecl* namespaceDecl);
 
-    bool getLocationFromFullSourceLoc(const FullSourceLoc& sourceLoc, std::string& filename, size_t& line, size_t& col);
+    void getLocationFromFullSourceLoc(const FullSourceLoc& sourceLoc, std::string& filename, size_t& line, size_t& col);
 
     std::stringstream ss;
     std::map<std::string, std::string> filenames;
