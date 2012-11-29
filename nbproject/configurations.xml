@@ -12,7 +12,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>DeclToString.cpp</itemPath>
+      <itemPath>DeclToString.hpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>testvisitor.cpp</itemPath>
+      <itemPath>testvisitor.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -32,10 +36,10 @@
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
+        <rebuildPropChanged>true</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <ccTool>
-          <commandLine>-fno-rtti -fvisibility=hidden</commandLine>
           <preprocessorList>
             <Elem>__STDC_CONSTANT_MACROS</Elem>
             <Elem>__STDC_LIMIT_MACROS</Elem>
@@ -151,9 +155,18 @@
             <linkerLibLibItem>clang</linkerLibLibItem>
             <linkerLibLibItem>clangAST</linkerLibLibItem>
           </linkerLibItems>
-          <commandLine>-fno-rtti -fvisibility=hidden</commandLine>
         </linkerTool>
       </compileType>
+      <item path="DeclToString.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <commandLine>-fno-rtti</commandLine>
+        </ccTool>
+      </item>
+      <item path="testvisitor.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <commandLine>-fno-rtti</commandLine>
+        </ccTool>
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>

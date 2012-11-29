@@ -35,15 +35,17 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/testvisitor.o \
+	${OBJECTDIR}/DeclToString.o
 
 
 # C Compiler Flags
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=-fno-rtti -fvisibility=hidden
-CXXFLAGS=-fno-rtti -fvisibility=hidden
+CCFLAGS=
+CXXFLAGS=
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -102,12 +104,22 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/clangtest: /usr/local/lib/libclangToo
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/clangtest: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -fno-rtti -fvisibility=hidden -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/clangtest -Wl,-S ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/clangtest -Wl,-S ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/testvisitor.o: nbproject/Makefile-${CND_CONF}.mk testvisitor.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -fno-rtti -MMD -MP -MF $@.d -o ${OBJECTDIR}/testvisitor.o testvisitor.cpp
+
+${OBJECTDIR}/DeclToString.o: nbproject/Makefile-${CND_CONF}.mk DeclToString.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -fno-rtti -MMD -MP -MF $@.d -o ${OBJECTDIR}/DeclToString.o DeclToString.cpp
 
 # Subprojects
 .build-subprojects:
